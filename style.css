@@ -1,0 +1,215 @@
+:root {
+    --bg: #0f172a;       /* Slate 900 */
+    --card: #1e293b;     /* Slate 800 */
+    --text: #e2e8f0;     /* Slate 200 */
+    --muted: #94a3b8;    /* Slate 400 */
+    --accent: #38bdf8;   /* Sky 400 */
+    }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #7dd3fc;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+}
+
+/* HEADER */
+header {
+    margin-bottom: 5rem;
+}
+
+/* New container to align Name and Headshot side-by-side */
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.header-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    color: #fff;
+    line-height: 1.1;
+}
+
+header p {
+    color: var(--muted);
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 5rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #334155;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+/* CARDS */
+.card {
+    margin-bottom: 2.5rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.card-meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card p {
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+}
+
+.card ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--muted);
+}
+
+.card li {
+    margin-bottom: 0.4rem;
+}
+
+/* SKILLS GRID */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-box strong {
+    display: block;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.skill-box p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* ABOUT SECTION */
+.about-container {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+}
+
+.photo-wrapper {
+    flex-shrink: 0;
+    width: 180px;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    display: block;
+}
+
+.caption {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: #475569;
+    font-size: 0.9rem;
+    margin-top: 6rem;
+    padding-top: 2rem;
+    border-top: 1px solid #1e293b;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+    /* Stack the header avatar and name on mobile */
+    .header-top {
+    flex-direction: column-reverse; /* Puts avatar on top of name */
+    align-items: flex-start;
+    gap: 1rem;
+    }
+    
+    header h1 { font-size: 2.2rem; }
+      
+.about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    
+.photo-wrapper {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1.5rem;
+    }
+}
