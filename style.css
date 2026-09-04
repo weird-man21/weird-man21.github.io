@@ -3,7 +3,7 @@
     --card: #1e293b;     /* Slate 800 */
     --text: #e2e8f0;     /* Slate 200 */
     --muted: #94a3b8;    /* Slate 400 */
-    --accent: #38bdf8;   /* Sky 400 */
+    --accent: #e8b45a;   /* Sky 400 */
     }
 
 * {
@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-    color: #7dd3fc;
+    color: #c9922a;
 }
 
 .container {
